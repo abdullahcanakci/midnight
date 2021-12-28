@@ -1,0 +1,17 @@
+{
+  "references": [{ "path": "./api" }, { "path": "./orm" }],
+  "exclude": ["**/node_modules", "**/dist"],
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    "importHelpers": true,
+    "composite": true,
+    "target": "es5"
+  }
+}

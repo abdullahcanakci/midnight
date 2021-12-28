@@ -1,4 +1,8 @@
 {
-	"private": true,
-	"workspaces": ["orm", "api"]
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "orm",
+    "api"
+  ]
 }
