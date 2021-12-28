@@ -1,0 +1,18 @@
+{
+  "name": "orm",
+  "version": "0.0.1",
+  "description": "DB layer for midnight",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+  	"test": "jest"
+  },
+  "dependencies": {
+    "mongoose": "^6.1.4"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
