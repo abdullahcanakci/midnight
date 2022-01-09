@@ -1,0 +1,21 @@
+{
+  "name": "@midnight/db",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "type": "module",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepack": "tsc --build tsconfig.build.json"
+  },
+  "dependencies": {
+    "mongodb-memory-server": "^8.1.0",
+    "mongoose": "^6.1.5",
+    "typescipt": "^1.0.0"
+  },
+  "devDependencies": {
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
+  }
+}
