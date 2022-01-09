@@ -9,7 +9,8 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "noImplicitAny": true,
-    "target": "es2019"
+    "target": "es2019",
+    "skipLibCheck": true
   },
   "exclude": ["**/*.test.ts", "**/lib"]
 }

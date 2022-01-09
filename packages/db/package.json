@@ -7,9 +7,11 @@
     "lib"
   ],
   "scripts": {
-    "prepack": "tsc --project tsconfig.build.json"
+    "prepack": "tsc --build tsconfig.build.json"
   },
   "dependencies": {
+    "mongodb-memory-server": "^8.1.0",
+    "mongoose": "^6.1.5",
     "typescipt": "^1.0.0"
   },
   "devDependencies": {
