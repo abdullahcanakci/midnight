@@ -10,6 +10,7 @@ const packages = readdirSync(basePath).filter((name) => {
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
+  testRunner: "jest-jasmine2",
   modulePathIgnorePatterns: ["lib"],
   moduleNameMapper: {
     ...packages.reduce(

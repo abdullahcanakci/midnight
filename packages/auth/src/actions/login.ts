@@ -12,7 +12,6 @@ export async function loginByEmail({
   password,
 }: LoginByEmailInterface): Promise<LoginResult> {
   const userFound = await User.findOne({ email });
-  console.log("found user", userFound);
   if (!userFound) {
     return { user: null };
   }

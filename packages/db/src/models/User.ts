@@ -11,7 +11,7 @@ interface UserInterface {
 const UserSchema = new Schema(
   {
     name: String,
-    email: String,
+    email: { type: String, index: { unique: true, sparse: true } },
     password: String,
   },
   { timestamps: true }
