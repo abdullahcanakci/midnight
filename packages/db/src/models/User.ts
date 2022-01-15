@@ -1,4 +1,6 @@
-import { Schema, model } from "mongoose";
+import * as mongoose from "mongoose";
+
+const { Schema, model } = mongoose;
 
 interface UserInterface {
   name: string;

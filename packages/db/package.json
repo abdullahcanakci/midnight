@@ -2,12 +2,12 @@
   "name": "@midnight/db",
   "version": "0.0.1",
   "main": "lib/index.js",
-  "type": "module",
+  "type": "commonjs",
   "files": [
     "lib"
   ],
   "scripts": {
-    "prepack": "tsc --build tsconfig.build.json"
+    "build": "tsc --build tsconfig.build.json"
   },
   "dependencies": {
     "mongodb-memory-server": "^8.1.0",

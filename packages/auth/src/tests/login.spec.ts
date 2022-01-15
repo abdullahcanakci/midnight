@@ -56,4 +56,8 @@ describe("email login", () => {
       .send({ email, password: "wrong_password" })
       .expect(422);
   });
+
+  test("missing param", async () => {
+    request(server).post("/login/email").send({}).expect(422);
+  });
 });

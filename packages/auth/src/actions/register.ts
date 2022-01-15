@@ -1,5 +1,6 @@
 import { User } from "@midnight/db";
-import { RegisterError, RegisterResult } from "./results";
+import { hash } from "../utils/password.js";
+import { RegisterError, RegisterResult } from "./results.js";
 
 interface RegisterByEmailInterface {
   email: string;
@@ -13,8 +14,7 @@ export async function registerByEmail({
   name,
 }: RegisterByEmailInterface): Promise<RegisterResult> {
   try {
-    // TODO: hash password
-    const newUser = new User({ name, email, password });
+    const newUser = new User({ name, email, password: await hash(password) });
     newUser.validateSync();
     await newUser.save();
     return { user: newUser };

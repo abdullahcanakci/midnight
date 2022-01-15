@@ -3,7 +3,7 @@ import { TestDbManager, User } from "@midnight/db";
 import * as bcrypt from "bcrypt";
 import * as request from "supertest";
 import server from "../server";
-import { RegisterError } from "../actions/results";
+import { RegisterError } from "../actions/results.js";
 
 beforeAll(async () => {
   await TestDbManager.connect();
@@ -58,11 +58,11 @@ describe("email register", () => {
   test("register missing param 422", async (done) => {
     const email = "test@example.com";
 
-    request(server)
+    const result = await request(server)
       .post("/register/email")
-      .send({ email, password: "wrong_password" })
-      .expect(422)
-      .end(done);
+      .send({ email, password: "" })
+      .expect(422);
+    done();
   });
 
   test("register duplicate email 422", async (done) => {

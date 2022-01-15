@@ -1,4 +1,4 @@
-import User, { UserInterface } from "./models/User";
-import TestDbManager from "./helpers/TestDbManager";
+import User, { UserInterface } from "./models/User.js";
+import TestDbManager from "./helpers/TestDbManager.js";
 
 export { User, UserInterface, TestDbManager };

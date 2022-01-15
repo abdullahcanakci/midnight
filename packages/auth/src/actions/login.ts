@@ -1,10 +1,10 @@
-import * as bcrypt from "bcrypt";
 import { User } from "@midnight/db";
+import { check } from "../utils/password.js";
 import { LoginResult } from "./results.js";
 
 interface LoginByEmailInterface {
-  email: String;
-  password: String;
+  email: string;
+  password: string;
 }
 
 export async function loginByEmail({
@@ -16,10 +16,7 @@ export async function loginByEmail({
     return { user: null };
   }
 
-  const result = await bcrypt.compare(
-    password.toString(),
-    userFound.password.toString()
-  );
+  const result = await check(password, userFound.password);
 
   return {
     user: result ? userFound : null,
